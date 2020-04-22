@@ -21,7 +21,6 @@ body {
 }
 
 a:hover {
-  color: #c54fd5;
   text-decoration: none;
 }
 
@@ -121,11 +120,17 @@ a:hover {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 30px;
 }
 
 #main {
   margin-top: 80px;
+}
+
+.logo-sm {
+  height: 1.3rem;
+  width: 0.8rem;
+  margin-right: 0.3rem;
 }
 
 /*--------------------------------------------------------------
@@ -237,12 +242,13 @@ a:hover {
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 9998;
   overflow-y: auto;
-  left: -260px;
-  width: 260px;
+  right: -280px;
+  width: 280px;
   padding-top: 18px;
-  background: #1e4356;
+  font-size: 2rem;
+  background: inherit;
   transition: 0.4s;
 }
 
@@ -255,14 +261,21 @@ a:hover {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #000000;
   padding: 10px 20px;
   font-weight: 500;
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #a2cce3;
   text-decoration: none;
+  transition-duration: .8s;
+  transform: translateX(.5rem);
+}
+
+.mobile-nav li:hover a:before {
+  content: "\eaa0";
+  font-family: IcoFont;
+  color: #e42a9d;
+  animation: fadeIn .8s;
 }
 
 .mobile-nav .drop-down > a:after {
@@ -294,7 +307,7 @@ a:hover {
   position: fixed;
   right: 15px;
   top: 15px;
-  z-index: 9998;
+  z-index: 9999;
   border: 0;
   background: none;
   font-size: 24px;
@@ -305,10 +318,6 @@ a:hover {
   text-align: right;
 }
 
-.mobile-nav-toggle i {
-  color: #fff;
-}
-
 .mobile-nav-overly {
   width: 100%;
   height: 100%;
@@ -316,7 +325,8 @@ a:hover {
   top: 0;
   left: 0;
   position: fixed;
-  background: rgba(30, 67, 86, 0.9);
+  background: inherit;
+  opacity: 0.8;
   overflow: hidden;
   display: none;
 }
@@ -326,7 +336,7 @@ a:hover {
 }
 
 .mobile-nav-active .mobile-nav {
-  left: 0;
+  right: 0;
 }
 
 .mobile-nav-active .mobile-nav-toggle i {
