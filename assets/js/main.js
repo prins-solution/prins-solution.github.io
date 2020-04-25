@@ -1,6 +1,8 @@
 !(function($) {
   "use strict";
 
+  $('.carousel').carousel('pause');
+
   // Toggle .header-scrolled class to #header when page is scrolled
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -61,7 +63,7 @@
       class: 'mobile-nav'
     });
     $('body').append($mobile_nav);
-    $('body').prepend('</span><a class="mobile-nav-toggle"><b>MENU</b></a>');
+    $('body').prepend('</span><a class="mobile-nav-toggle align-middle"><span class="dot dot-lg"></span><span class="dot dot-md"></span><span class="dot dot-sm mr-3"></span><b>MENU</b></a>');
     $('body').append('<div class="mobile-nav-overly"></div>');
 
     $(document).on('click', '.mobile-nav-toggle', function(e) {
@@ -185,33 +187,30 @@
 
 $(document).ready(function(){
   $('.slick-control').slick({
-    centerMode: true,
+    centerMode: false,
     slidesToShow: 1,
-    slidesToScroll: 1,
     touchMove: true,
-    swipe: true,
-    swipeToSlide: true,
     vertical: true,
     verticalSwiping: true,
+    asNavFor: '.slick-content',
     prevArrow: false,
     nextArrow: false,
-    asNavFor: '.slick-content',
-    autoplay: true,
-    autoplaySpeed: 5000,
+    speed: 1500,
     responsive: [{
       breakpoint: 756,
       settings: {
+        swipe: true,
+        swipeToSlide: true,
         vertical: false,
         verticalSwiping: false
       }
     }]
-
   });
 
   $('.slick-control').on('wheel', (function(e) {
     e.preventDefault();
     clearTimeout(scroll);
-    scroll = setTimeout(function(){scrollCount=0;}, 200);
+    scroll = setTimeout(function(){scrollCount=0;}, 300);
     scrollCount=1;
     if (e.originalEvent.deltaY < 0) {
         $(this).slick('slickNext');
@@ -221,18 +220,52 @@ $(document).ready(function(){
   }));
 
   $('.slick-content').slick({
+    slidesToShow: 1,
     vertical: true,
-    useTransform: true,
     prevArrow: false,
     nextArrow: false,
+    speed: 0,
     responsive: [{
       breakpoint: 756,
       settings: {
+        swipe: true,
+        swipeToSlide: true,
         vertical: false,
-        verticalSwiping: false
+        verticalSwiping: false,
+        dots: true
       }
     }]
   });
+
+
+  $(".btn").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#case-studies").offset().top
+    }, 1000);
+  });
+
+  // Auto Animation
+
+  var timeLeft = 10;
+  setInterval(countdown, 1000);
+
+  function countdown() {
+    if (timeLeft == 8) {
+      $("#slogan-1").addClass("effect-1");
+    }
+    if (timeLeft == 6) {
+      $("#slogan-1").removeClass("effect-1").html("and lead other").addClass("effect-2");
+    }
+    if (timeLeft == 4) {
+      $('html, body').animate({
+        scrollTop: $("#case-studies").offset().top
+      }, 1000);
+    }
+    if (timeLeft == 2) {
+      $("#big-show").remove();
+    }
+    timeLeft--;
+  }
 
 
 });
