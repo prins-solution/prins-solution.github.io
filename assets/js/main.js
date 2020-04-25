@@ -256,12 +256,12 @@ $(document).ready(function(){
     if (timeLeft == 6) {
       $("#slogan-1").removeClass("effect-1").html("and lead other").addClass("effect-2");
     }
-    if (timeLeft == 4) {
+    if (timeLeft == 2) {
       $('html, body').animate({
         scrollTop: $("#case-studies").offset().top
       }, 1000);
     }
-    if (timeLeft == 2) {
+    if (timeLeft == 0) {
       $("#big-show").remove();
     }
     timeLeft--;
