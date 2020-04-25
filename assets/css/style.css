@@ -89,12 +89,13 @@ a:hover {
 }
 
 #big-show {
+  min-height: 30rem;
+  height: 100%;
   transition: ease all 0.3s;
 }
 
 #case-studies {
-  animation: fadeInUp;
-  transition: 1s;
+  height: 100%;
 }
 
 h1 {
@@ -1967,19 +1968,19 @@ section {
 
 img.img-hero {
   vertical-align: bottom;
-  display: inline;
+  max-width:85%;
+  max-height:85%;
 }
 
 .hero-section {
   height: 90vh;
   text-align: center;
   margin: auto;
-  padding-top: 15%;
 }
 
+
 .hero-slogan {
-  height: 160px;
-  padding-top: 50px;
+  padding-top: 15%;
 }
 
 .hero-bottom {
