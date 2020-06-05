@@ -1,13 +1,3 @@
-/**
-* Template Name: Moderna - v2.0.1
-* Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   color: #444;
   height: 90vh;
@@ -2408,4 +2398,55 @@ img.img-hero {
   height: 2rem;
   width: 2rem;
   background-color: #e42a9d;
+}
+
+/*--------------------------------------------------------------
+# Customize
+--------------------------------------------------------------*/
+@media (min-width: 34em) {
+  .card-columns {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+  }
+}
+
+@media (min-width: 48em) {
+  .card-columns {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+  }
+}
+
+.card.card-xs {
+  min-height: 8rem;
+  max-height: 8rem;
+  margin-bottom: 1rem;
+}
+
+.card.card-sm {
+  min-height: 17rem;
+  max-height: 17rem;
+  margin-bottom: 1rem;
+}
+
+.card.card-lg {
+  min-height: 35rem;
+  max-height: 35rem;
+  margin-bottom: 1rem;
+}
+
+.w-90
+{
+    width: 90% !important;
+}
+
+.header-navbar {
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity .15s ease;
 }
