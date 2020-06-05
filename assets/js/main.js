@@ -231,8 +231,7 @@ $(document).ready(function(){
         swipe: true,
         swipeToSlide: true,
         vertical: false,
-        verticalSwiping: false,
-        dots: true
+        verticalSwiping: false
       }
     }]
   });
