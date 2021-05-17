@@ -100,7 +100,6 @@
 
   // Intro carousel
   var heroCarousel = $("#heroCarousel");
-
   heroCarousel.on('slid.bs.carousel', function(e) {
     $(this).find('h2').addClass('animated fadeInDown');
     $(this).find('p').addClass('animated fadeInUp');
@@ -164,16 +163,13 @@
     var portfolioIsotope = $('.portfolio-container').isotope({
       layoutMode: 'fitRows'
     });
-
     $('#portfolio-flters li').on('click', function() {
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
-
       portfolioIsotope.isotope({
         filter: $(this).data('filter')
       });
     });
-
   });
 
   // Initi AOS
@@ -195,7 +191,7 @@ $(document).ready(function(){
     asNavFor: '.slick-content',
     prevArrow: false,
     nextArrow: false,
-    speed: 1500,
+    speed: 2000,
     responsive: [{
       breakpoint: 756,
       settings: {
@@ -236,7 +232,6 @@ $(document).ready(function(){
     }]
   });
 
-
   $(".btn").click(function() {
     $('html, body').animate({
       scrollTop: $("#case-studies").offset().top
@@ -244,27 +239,21 @@ $(document).ready(function(){
   });
 
   // Auto Animation
-
   var timeLeft = 10;
   setInterval(countdown, 1000);
-
   function countdown() {
     if (timeLeft == 8) {
       $("#slogan-1").addClass("effect-1");
     }
     if (timeLeft == 6) {
-      $("#slogan-1").removeClass("effect-1").html("and lead other").addClass("effect-2");
+      $("#slogan-1").removeClass("effect-1").html("lead other").addClass("effect-2");
     }
     if (timeLeft == 2) {
       $('html, body').animate({
         scrollTop: $("#case-studies").offset().top
       }, 1000);
     }
-    if (timeLeft == 0) {
-      $("#big-show").remove();
-    }
     timeLeft--;
   }
-
 
 });
