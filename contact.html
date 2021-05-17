@@ -29,26 +29,25 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="text-s1 bg-black">
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top bg-white border-bottom">
+  <header id="header" class="fixed-top bg-black border-bottom mb-0">
     <div class="d-flex justify-content-between">
       <div class="logo ml-3 float-left">
-        <a href="index.html"><img src="assets/img/prins-full-1.png" class="img-fluid" alt=""></a>
+        <a href="index.html"><img src="assets/img/prins-full-2.png" class="img-fluid" alt=""></a>
       </div>
       <div class="text-s1 font-weight-bold mt-1 mr-5">
-        <h5 class="header-navbar">CONTACT US</h5>
+        <h5 class="header-navbar">Contact Us</h5>
       </div>
       <div>
+        <br><br>
         <nav class="nav-menu d-none">
-          <ul class="text-s1 font-weight-bold">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="capabilities.html">Capabilities</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+          <ul class="text-s1 text-black font-weight-bold mt-4">
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="case_studies.html">Case Studies</a></li>
+            <li><a href="capabilities.html">Capabilities</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -59,8 +58,9 @@
 
     <!-- ======= Map Section ======= -->
     <section class="map mt-2">
+      <div id="map"></div>
       <div class="container-fluid p-0">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007%2C%20USA!5e0!3m2!1sen!2sbg!4v1579767901424!5m2!1sen!2sbg" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <iframe src="https://maps.google.com/maps?q=3.1681505,101.6518652&hl=es;z=14&amp;output=embed" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
     </section><!-- End Map Section -->
 
@@ -74,31 +74,32 @@
 
             <div class="row">
               <div class="col-md-12">
-                <div class="info-box">
+                <div class="info-box bg-white">
                   <i class="bx bx-map"></i>
                   <h3>Our Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>Businesss Suit, Arcorsi Mont Kiara, Jalan Kiara, </p>
+                  <p>Mont Kiara, 47100 Kuala Lumpur, Malaysia</p>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="info-box">
+                <div class="info-box bg-white">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <p>info@prins.my</p>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="info-box">
+                <div class="info-box bg-white">
                   <i class="bx bx-phone-call"></i>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                  <p>+603-64115339</p>
                 </div>
               </div>
             </div>
 
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-6 bg-white">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-row">
                 <div class="col-md-6 form-group">
@@ -135,30 +136,29 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="bg-white fixed-bottom border-top">
-    <div class="copyright d-flex justify-content-between">
-
-      <div>
-          <span>Privacy Statement</span>
-          <span>Terms of Use</span>
+  <footer id="footer" class="bg-black fixed-bottom border-top">
+    <div class="copyright row">
+      <div class="col-md-4 text-center text-md-left">
+        <a href="https://www.instagram.com/prins.my/" class="mr-2">Privacy Statement</a>
+        <a href="https://www.facebook.com/prinssolution/">Terms of Use</a>
       </div>
-
-      <div class="d-flex justify-content-center">
+      <div class="col-md-4 text-center">
         <a href="https://www.instagram.com/prins.my/" class="instagram"><i class="bx bxl-instagram bx-sm"></i></a>
         <a href="https://www.facebook.com/prinssolution/" class="facebook"><i class="bx bxl-facebook-square bx-sm"></i></a>
       </div>
-
-      <div class="d-flex justify-content-end">
-        <div class="d-inline-block">
-          <a href="index.html"><img src="assets/img/favicon.png" class="logo" style="height: 2rem;"></a>
-        </div>
-        <div class="d-inline-block" style="width: 8rem; font-size: 10px;">
-          &copy; Copyright <strong><span>Prins Solution</span></strong>. All Rights Reserved
-        </div>
+      <div class="col-md-4 text-center text-md-right">
+          <a href="index.html"><img src="assets/img/favicon.png" class="logo" style="height: 1rem;"></a>
+          &copy; 2021 <span>Prins Solution Sdn. Bhd.</span>
       </div>
-
     </div>
   </footer>
+
+  <a href="https://www.facebook.com/prinssolution/" target="_blank" class="fbball float-icon">
+    <i class="bx bxl-facebook-square bx-md"></i>
+  </a>
+  <a href="https://www.instagram.com/prins.my/" target="_blank" class="instaball float-icon">
+    <i class="bx bxl-instagram bx-md"></i>
+  </a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
