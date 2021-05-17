@@ -3,6 +3,10 @@ body {
   height: 90vh;
 }
 
+.slick-control div { 
+  transition: none; 
+}
+
 .bg-black a {
   color: #ffffff;
 }
@@ -16,7 +20,7 @@ a:hover {
 }
 
 .text-s1 {
-  font-family: 'Ubuntu','Righteous','Roboto','Arial';
+  font-family: 'Century Gothic','Ubuntu','Righteous','Roboto','Arial';
 }
 
 .text-s2 {
@@ -37,6 +41,52 @@ a:hover {
 .text-prins {
   color: #e42a9d !important;
   vertical-align: middle;
+}
+
+.bg-prins {
+  background-color: #e42a9d !important;
+}
+
+.capa-img{
+  max-height: 4rem;
+  max-width: 12rem;
+  float: top;
+}
+
+.capa-img2{
+  max-height: 4rem;
+  max-width: 12rem;
+  float: top;
+  filter: grayscale(100%);
+  opacity: 0.2;
+}
+
+.case-study-img{
+  filter: grayscale(100%);
+  opacity: 0.3;
+}
+
+.case-study-img:hover{
+  filter: grayscale(0%);
+  opacity: 1.0;
+  text-shadow: 1px 1px 2px black;
+  color: #e42a9d !important;
+  vertical-align: middle;
+}
+
+
+.nav-link.active {
+  background-color: transparent !important;
+}
+
+.nav-link.active>img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.nav-link>img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 @keyframes special-1 {
@@ -69,12 +119,7 @@ a:hover {
   animation: special-2 2s linear;
 }
 
-#slogan-1 {
-  text-align: middle;
-}
-
 #slogan-2 {
-  text-align: middle;
   transition: ease all 0.3s;
 }
 
@@ -2295,11 +2340,11 @@ img.img-hero {
 }
 
 .slider.slick-control .slick-slide.slick-current {
-  transition-delay: 0.05s;
+  transition-delay: 0.1s;
   transition: 1s ease-in all;
   opacity: 1;
   filter: none;
-  max-width: 100%;
+  max-width: 90%;
 }
 /*--------------------------------------------------------------
 # Slicker-Content
@@ -2449,4 +2494,54 @@ img.img-hero {
   text-decoration: none;
   opacity: 1;
   transition: opacity .15s ease;
+}
+
+.instaball{
+	position:fixed;
+	width:40px;
+	height:40px;
+	bottom:10%;
+	right:1%;
+	background-color: #7d3fa7;
+	color:#FFF;
+	border-radius:10px;
+  padding:2px;
+  margin-top: 3px;
+  line-height: 20px;  
+}
+
+.fbball{
+  display: inline-block;      
+  z-index: 1;  
+	position:fixed;
+	width:40px;
+	height:40px;
+	bottom:16%;
+	right:1%;
+	background-color: #c97425;
+	color:#FFF;
+	border-radius:10px;
+  padding:2px;
+  margin-top: 3px;
+  line-height: 20px;  
+}
+
+.float-icon:hover{
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+  transform: translate3d(0px, -1px, 0px);
+}
+
+.grow {
+  padding: 5px 5px 5px 5px;
+  height: 49px;
+  width: 22%;
+  margin: 5px 1% 5px 1%;
+  position: relative;
+  transition: height 1.5s;
+  -webkit-transition: height 1.5s;
+  text-align: center;
+  overflow: hidden;
+}
+.grow:hover {
+  height: auto;
 }
